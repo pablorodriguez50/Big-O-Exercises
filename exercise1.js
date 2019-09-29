@@ -15,8 +15,45 @@ function findNemo(array){
     console.log('Call to find Nemo took ' + (t1-t0) + ' miliseconds');
 }
 
-findNemo(large); // 0(n) --> Linear Time
+const findNemo2 = array =>{
+    array.forEach(fish =>{
+        if(fish === 'nemo'){
+            console.log('Found NEMO!');
+        }
+    })
+}
+
+const findNemo3 = array=>{
+    for(let fish of array){
+        if(fish === 'nemo'){
+            console.log('Found NEMO!');
+        }
+    }
+}
+
+
+findNemo(everyone); // 0(n) --> Linear Time
+findNemo2(everyone);
+findNemo3(everyone);
+
 
 
 // O(n) --> Linear Time
 // O(n^2) --> Quadratic Time
+
+
+var ourDog = {
+    "name" : "camper",
+    "legs" : 4,
+    "tails" : 1,
+    "friends" : ["everything!"],
+
+    changeName : function(nu){
+        return this.name = nu;
+    }
+};
+
+
+ourDog.changeName("Ricardito");
+
+console.log(ourDog.name);
